@@ -10,6 +10,9 @@ function App(props) {
   // if (props.authState === "signedIn") {
   //   return <div className="App">Notetaker</div>;
   // } else return null;
+  Auth.currentUserInfo().then((userInfo) => {
+    userInfo && console.log(userInfo.attributes["custom:tier"]);
+  });
   return <div>Notetaker</div>;
 }
 
